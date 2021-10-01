@@ -1,0 +1,212 @@
+<HTML>
+<HEAD>
+	<TITLE>RES NAV</TITLE>
+	<LINK HREF = "https://fonts.googleapis.com/icon?family=Material+Icons" REL = "STYLESHEET">
+</HEAD>
+<BODY>
+
+<DIV CLASS = NAVIGATION>
+	<!--============================================================================-->
+	<input ID = "NAV-TOGGLE" TYPE = "CHECKBOX">
+	<!--============================================================================-->
+	<DIV CLASS = "LOGO">
+		Legen<STRONG>Darhil</STRONG>
+	</DIV>
+	<!--============================================================================-->
+	<UL CLASS = "links">
+		<A HREF = "#HOME"><LI>HOME</LI></A>
+		<A HREF = "#ABOUT"><LI>ABOUT</LI></A>
+		<A HREF = "#LOGIN"><LI>LOGIN</LI></A>
+		<A HREF = "#BASTA"><LI>BASTA</LI></A>
+		<A HREF = "#EWAN KO NA"><LI>EWAN KO</LI></A>
+	</UL>
+	<!--============================================================================-->
+	<LABEL FOR = "NAV-TOGGLE" CLASS = "icon-burger">
+		<DIV CLASS = "BURG"><span class="material-icons">menu</span></DIV>
+	</LABEL>
+</DIV>
+<!--============================================================================-->
+<DIV CLASS = "CONTAINER">
+	<IMG SRC = "1.JPG" ALT = "BAT MO KASI DINELETE">
+	<IMG SRC = "2.JPG" ALT = "BAT MO KASI DINELETE">
+	<IMG SRC = "3.JPG" ALT = "BAT MO KASI DINELETE">
+</DIV>
+<!--============================================================================-->
+<!--============================================================================-->
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<!--============================================================================-->
+<!--============================================================================-->
+<STYLE>
+* /*BASTA, ITONG TATLONG 'TO, HINDI NAWAWALA SA MGA GINAGAWA KO*/
+{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+/*********************************************************/
+.CONTAINER /*MAIN CONTENT*/
+{
+	margin-top: 100px; /*DAPAT KAPAREHAS NG HEIGTH NG NAVIGATION BAR*/
+}
+.CONTAINER img /*BASTA EXAMPLE LANG NG CONTENT ITO*/
+{
+	display: block;
+	width: 100%;
+}
+/*********************************************************/
+.NAVIGATION
+{
+	position: fixed; /*DITO DEDEPENDE ANG LAHAT. BASTA ANG EXAMPL NA ITO AY FIXED. MAIBA LANG POSITION NITO, IBA NA LAHAT DAPAT NG CSS MO SA BUONG RESPONSIVE NAVIGATION NA ITO.*/
+	z-index: 100; /*DEPENDE SA DISENYO. BASTA NAKA 100 PARA NASA IBABAW TALAGA*/
+
+	height: 100px; /*KAPAG GUSTO MONG IBAHIN, BAHIN MO RIN MARGIN NG MAIN CONTENT. DAPAT KAGAYANG KAGAYA NITO HA*/
+	padding: 0 60 0 60;
+
+	left: 0; /*KOMBINASYON PARA MASAKOP NAG BUONG LAPAD NG SCREEN AT MAI-SENTRO ANG NAVIGATION BAR*/
+	right: 0; /*KOMBINASYON PARA MASAKOP NAG BUONG LAPAD NG SCREEN AT MAI-SENTRO ANG NAVIGATION BAR*/
+	top: 0; /*BAHALA KA NA KUNG SAAN MO GUSTONG ILAGAY NAAVIGATION BAR MO. KUNG GUSTO MO MAG-PAUSO TAYO NG BAGO, LAGAY NATIN SA IBABA. GAWIN MO NGA LANG 'TONG BOTTOM: 0;. BASTA KAPAG NA-ADJUST ITO, MA-AADJUST DIN DAPAT LAHAT NG MGA CSS*/
+
+	background-color: darkcyan;
+	font-family: franklin gothic;
+	border: 3px solid black;
+}
+.NAVIGATION .LOGO /*WALA LANG 'TO*/
+{
+	display: flex;
+	float: left;
+
+	width: fit-content;
+	height: 100%;
+	align-items: center;
+
+	font-size: 40px;
+	color: white;
+}
+.NAVIGATION .links /*DESIGN LANG 'TO*/
+{
+	display: flex; /*PARA NAKA-ROW*/
+	float: right; /*PARA LANG MAPUNTA SA KANAN*/
+
+	justify-content: space-around; /*PARA MAS MAGING ADOPTIVE O RESPONSIVE ANG LINKS SA MGA KABAGAYAN SA BOHAY BOHAY*/
+
+	width: 60%; /*DEPENDE NA SA'YO KUNG GAANO SIYA KALAKI. DEDEPENDE KASI 'TO SA KUNG ANONG MGA NAKA-LAGAY SA NAVIGATION BAR MO. PARA NA RIN MAGING RESPONSIVE ANG LINKS SA SIZE (KUNG GUSTO MO LANG)*/
+	height: 100%; /*AY BAHALA KA NA. NAKA-100% LANG 'TO PARA MASAKOP LAHAT NG SAPACE VERTICALLY.*/
+		
+	align-items: center; /*KUNG NAKA 100% HEIGHT, ILAGAY MO NA 'TO PARA LANG MAI-GITNA YUNG MGA LINKS*/
+}
+.NAVIGATION .links li /*DESIGN LANG 'TO*/
+{
+	list-style: none; /*PARA LANG ALISIN YUNG BULLETS*/
+	border: 1px solid red;
+
+	width: 110px;
+	padding: 10 0 10 0;
+	text-align:  center;
+
+	color: antiquewhite;
+	font-size: 20px;
+	font-weight: bold;
+
+	border-radius: 15px;
+	border: 1px solid black;
+}
+.NAVIGATION .links a
+{
+	text-decoration: none; /*PARA LANG ALISIN YUNG LINYA NG LINKS*/
+}
+.NAVIGATION .links li:hover /*DESIGN LANG 'TO*/
+{
+	color: black;
+	background-color: lightblue;
+
+	transition: all .3s ease-in;
+}
+#NAV-TOGGLE
+{
+	display: none; /*ITATAGO LANG YUNG CHECKBOX. HINDI NAMAN KAILANGANG NAKA-LITAW 'YAN EH*/
+}
+.NAVIGATION .icon-burger /*KAHIT DISPLAY NONE NA NGA LANG 'TO EH. ILIPAT MO NALANG SA GAGAWIN MONG ADOPT ADOPT NG SCREEN. SA ((.NAVIGATION .icon-burger)). BASTA AKO GANYAN AKO GUMAWA. NILALAGAY KO SA PWEDE KONG MAKITA KAAGAD PARA MAI-EDIT KO NG MAS MADALI.*/
+{
+	display: none;
+	position: absolute;
+
+	right: 30PX;
+	top: 50%;
+	transform: translateY(-50%);
+
+	padding: 1px;
+	border-radius: 10px;
+	border: 1px solid black;
+	
+}
+.NAVIGATION .icon-burger .BURG /*WALA LANG 'TO*/
+{
+
+	transition: all .7s ease-in-out;
+}
+.material-icons
+{
+	font-size: 50px;
+}
+/*********************************************************/
+/************************[ ADOPT ]************************/
+/*********************************************************/
+@media screen and (max-width: 836px) /*DEPENDE SA DISENYO MO. IKAW BAHALA KUNG KAILAN MAG-AADOPT SA PARTIKULAR NA WIDTH O HEIGHT */
+{
+	.NAVIGATION .LOGO /*DESIGN LANG 'TO*/
+	{
+		float: none;
+		width: auto;
+		justify-content: center;
+		
+		color: orange;
+		font-family: georgia;
+	}
+	.NAVIGATION .links li /*DESIGN LANG 'TO*/
+	{
+		font-size: 30px;
+		width: 200px;
+		color: darkblue;
+		background-color: rgba(173, 216, 230, .5);
+	}
+	.NAVIGATION .links /*KAILANGAN 'TO PARA MAY MAPAG-TAGUAN YUNG MGA LINKS*/
+	{
+		position: fixed; /*PARA LANG HINDI GUMALAW-GALAW*/
+		z-index: 100; /*KAHIT NA ANO NA. BASTA UMIBABAW SIYA. MAS MATAAS MAS MAGANDA PARA SURE*/
+		
+		top: 100px; /*DEDEPENDE KUNG GAANO KAKAPAL NAVIGATION BAR MO*/
+		bottom: 100%; /*COMBINATION PARA ITATAGO YUNG LINKS*/
+		overflow: hidden; /*COMBINATION PARA ITATAGO YUNG LINKS*/
+		left: 0; /*COMBINATION 'TONG DALAWA PARA MA-CENTER*/
+		right: 0; /*COMBINATION 'TONG DALAWA PARA MA-CENTER*/
+
+		width: auto; /*AUTO O 100% PWEDE KAHIT ANO. PARA LANG MASAKOP LAHAT NG WIDTH*/
+		height: auto; /*KAILANGAN NAKA- AUTO PARA MAG-RESPONSE NG MAAYOS KAPAG TINATAGO AT NILALABAS*/
+		flex-direction: column; /*PARA NAKA-COLUMN LAHAT NG BUTTONS*/
+
+		background-color: rgba(0,0,0, .5); /*WALA LANG 'TO. PARA SA BG LANG*/
+
+		transition: all .5s ease-in-out;
+	}
+	.NAVIGATION :checked ~ .links
+	{
+		bottom: 0; /*KAPAG PININDOT MO YUNG PANG-LABAS, MAPUPUNTA SA PINAKA-IBABA*/
+	}
+	.NAVIGATION .icon-burger
+	{
+		display: block; /*KAHIT I-UNSET MO NA 'TO EH. KAHIT NGA I-FLEX MO PA. ANG IMPORTANTE LUMABAS YUNG PINDUTAN*/
+	}
+	.NAVIGATION :checked ~ .icon-burger .BURG /*WALA LANG 'TO*/
+	{
+		transform: translateY(0px) rotate(360deg); 
+	}
+	.NAVIGATION :checked ~ .icon-burger /*WALA LANG 'TO*/
+	{
+		background-color: orange;
+		transition: all 1.5s ease-in-out;
+	}
+}
+</STYLE>
+
+</BODY>
+</HTML>
